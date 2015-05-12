@@ -1,0 +1,20 @@
+<% provide(:title, @event.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="event_info">
+      <h3>
+        <%= @event.name %>
+        <br />
+        <%= @event.date %>
+      </h3>
+      <h4>
+        <%= @event.description %>
+      </h4>
+      <div>
+        Available Members:
+        <%= find_available %>
+        <%= @available %>
+      </div>
+    </section>
+  </aside>
+</div>

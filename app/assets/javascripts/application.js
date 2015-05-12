@@ -15,3 +15,8 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+//= require moment
+//= require bootstrap-datetimepicker
+$(function() {
+    $('input.datepicker').data({behaviour: "datepicker"}).datepicker();
+});

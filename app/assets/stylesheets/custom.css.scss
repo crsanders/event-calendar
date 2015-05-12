@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 
 /* mixins, variables, etc. */
 
@@ -147,6 +148,19 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+}
+
+#event_startdatetime_1i {
+  float:left;
+  width: 100px;
+  margin-right: 5px;
+
+}
+#event_startdatetime_2i {
+  width: 150px;
+}
+#event_startdatetime_3i,#event_startdatetime_4i,#campaign_startdatetime_5i {
+  width: 75px;
 }
 
 input {

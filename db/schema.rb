@@ -11,15 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420213252) do
+ActiveRecord::Schema.define(version: 20150506205710) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.datetime "event"
+    t.string   "description", limit: 255
+    t.integer  "available",   limit: 4
+    t.date     "date"
+    t.time     "time"
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",            limit: 255
-    t.string   "email",           limit: 255
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.string   "password_digest", limit: 255
-    t.boolean  "admin",           limit: 1,   default: false
+    t.string   "name",               limit: 255
+    t.string   "email",              limit: 255
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.string   "password_digest",    limit: 255
+    t.boolean  "admin",              limit: 1,   default: false
+    t.time     "availability_start"
+    t.time     "availability_end"
+    t.time     "sunday_start"
+    t.time     "sunday_end"
+    t.time     "monday_start"
+    t.time     "monday_end"
+    t.time     "tuesday_start"
+    t.time     "tuesday_end"
+    t.time     "wednesday_start"
+    t.time     "wednesday_end"
+    t.time     "thursday_start"
+    t.time     "thursday_end"
+    t.time     "friday_start"
+    t.time     "friday_end"
+    t.time     "saturday_start"
+    t.time     "saturday_end"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

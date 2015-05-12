@@ -6,6 +6,53 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <br />
+      <br />
+      <br />
+      <p>
+        Sunday:
+        <br />
+        <%= "Unavailable" if @user.sunday_start.to_i > @user.sunday_end.to_i %>
+        <%= @user.sunday_start unless @user.sunday_start.to_i > @user.sunday_end.to_i %>
+        <%= @user.sunday_end unless @user.sunday_start.to_i > @user.sunday_end.to_i %>
+        <br />
+        Monday:
+        <br />
+        <%= "Unavailable" if @user.monday_start.to_i > @user.monday_end.to_i %>
+        <%= @user.monday_start unless @user.monday_start.to_i > @user.monday_end.to_i %>
+        <%= @user.monday_end unless @user.monday_start.to_i > @user.monday_end.to_i %>
+        <br />
+        Tuesday:
+        <br />
+        <%= "Unavailable" if @user.tuesday_start.to_i > @user.tuesday_end.to_i %>
+        <%= @user.tuesday_start unless @user.tuesday_start.to_i > @user.tuesday_end.to_i %>
+        <%= @user.tuesday_end unless @user.tuesday_start.to_i > @user.tuesday_end.to_i %>
+        <br />
+        Wednesday:
+        <br />
+        <%= "Unavailable" if @user.wednesday_start.to_i > @user.wednesday_end.to_i %>
+        <%= @user.wednesday_start unless @user.wednesday_start.to_i > @user.wednesday_end.to_i %>
+        <%= @user.wednesday_end unless @user.wednesday_start.to_i > @user.wednesday_end.to_i %>
+        <br />
+        Thursday:
+        <br />
+        <%= "Unavailable" if @user.thursday_start.to_i > @user.thursday_end.to_i %>
+        <%= @user.thursday_start unless @user.thursday_start.to_i > @user.thursday_end.to_i %>
+        <%= @user.thursday_end unless @user.thursday_start.to_i > @user.thursday_end.to_i %>
+        <br />
+        Friday:
+        <br />
+        <%= "Unavailable" if @user.friday_start.to_i > @user.friday_end.to_i %>
+        <%= @user.friday_start unless @user.friday_start.to_i > @user.friday_end.to_i %>
+        <%= @user.friday_end unless @user.friday_start.to_i > @user.friday_end.to_i %>
+        <br />
+        Saturday:
+        <br />
+        <%= "Unavailable" if @user.saturday_start.to_i > @user.saturday_end.to_i %>
+        <%= @user.saturday_start unless @user.saturday_start.to_i > @user.saturday_end.to_i %>
+        <%= @user.saturday_end unless @user.saturday_start.to_i > @user.saturday_end.to_i %>
+        <br />
+      </p>
     </section>
   </aside>
 </div>
